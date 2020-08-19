@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;lt;?php    //单行注释    /        多行注释     / ?&amp;gt; echo “”;  输出语句 phpinfo(); 输出版本 变量 以$开头，加变量名。$a.不能以数字开头变量区分大小写。$a 不一样$A 变量的类型：isset()isset() 函数用于检测变量是否已设置并且非 NULL。 var_dump():解释布尔型变量。var_dump() 函数用于输出变">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gslaj&#39;s blog">
+<meta property="og:url" content="http://yoursite.com/2020/08/19/5、PHP基础/index.html">
+<meta property="og:site_name" content="gslaj&#39;s blog">
+<meta property="og:description" content="&amp;lt;?php    //单行注释    /        多行注释     / ?&amp;gt; echo “”;  输出语句 phpinfo(); 输出版本 变量 以$开头，加变量名。$a.不能以数字开头变量区分大小写。$a 不一样$A 变量的类型：isset()isset() 函数用于检测变量是否已设置并且非 NULL。 var_dump():解释布尔型变量。var_dump() 函数用于输出变">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-01-12T13:19:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gslaj&#39;s blog">
+<meta name="twitter:description" content="&amp;lt;?php    //单行注释    /        多行注释     / ?&amp;gt; echo “”;  输出语句 phpinfo(); 输出版本 变量 以$开头，加变量名。$a.不能以数字开头变量区分大小写。$a 不一样$A 变量的类型：isset()isset() 函数用于检测变量是否已设置并且非 NULL。 var_dump():解释布尔型变量。var_dump() 函数用于输出变">
+
+<link rel="canonical" href="http://yoursite.com/2020/08/19/5、PHP基础/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | gslaj's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">gslaj's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/5、PHP基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-12 21:19:30" itemprop="dateModified" datetime="2020-01-12T21:19:30+08:00">2020-01-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>&lt;?php<br>    //单行注释<br>    /<em><br>        多行注释
+    </em>/</p>
+<p>?&gt;</p>
+<p>echo “”;  输出语句</p>
+<p>phpinfo(); 输出版本</p>
+<p>变量</p>
+<p>以$开头，加变量名。$a.不能以数字开头<br>变量区分大小写。$a 不一样$A</p>
+<p>变量的类型：<br>isset()<br>isset() 函数用于检测变量是否已设置并且非 NULL。</p>
+<p>var_dump():解释布尔型变量。<br>var_dump() 函数用于输出变量的相关信息。<br>var_dump() 函数显示关于一个或多个表达式的结构信息，包括表达式的类型与值。数组将递归展开值，通过缩进显示其结构。</p>
+<p>gettype<br>gettype() 函数用于获取变量的类型。</p>
+<p>整型：  integer<br>浮点型：  double<br>字符串：  string<br>布尔：  boolean   false  true<br>数组：   索引数组，关联数组   array<br>NULL：  NULL<br>资源：<br>对象：</p>
+<p>运算符：</p>
+<p>数学运算符：+  -   *   /   %</p>
+<p>%取模运算。取余数</p>
+<p>++    –</p>
+<p>前++  ；  $++a  先+1，后运算</p>
+<p>后++  ：$a++   先运算，后+1</p>
+<p>前–<br>后–</p>
+<p>比较运算符：&gt;   &gt;=   &lt;   &lt;=  !=  ==  ===   !==</p>
+<p>比较运算符返回的是布尔类型；</p>
+<p>===横等于  需要两个变量的类型也要相等。<br>!==横不等于   </p>
+<p>$a = 10;$b=”10”;<br>$a==$b  true<br>$a===$b  false   类型也要相同</p>
+<p>三元运算符<br>? : </p>
+<p>逻辑运算符<br>&amp;&amp;与   ||或   !非</p>
+<p>字符串运算符<br>.<br>“this”.”is”</p>
+<p>三大控制结构</p>
+<p>1、顺序</p>
+<p>2、选择 if   switch</p>
+<pre><code>if (condition) {
+    # code...
+}
+
+switch (variable) {
+    case &apos;value&apos;:
+        # code...
+        break;
+
+    default:
+        # code...
+        break;
+}
+</code></pre><p>3、循环结构</p>
+<p>while ( &lt;= 10) {</p>
+<pre><code># code...
+</code></pre><p>}</p>
+<p>for ($i=0; $i &lt; ; $i++) { </p>
+<pre><code># code...
+</code></pre><p>}</p>
+<pre><code>do{
+
+}while ( &lt;= 10);
+</code></pre><p>break  跳出循环</p>
+<p>continue   略过本次循环，继续执行下面，只对本次循环有效</p>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>header(“Content-type:text/html;charset=utf-8”);  //用于接近中文乱码。</p>
+<p>字符串基本知识和常用函数</p>
+<p>“”  ‘’  定义字符串的不同和区别<br>“”  解释里面的变量<br>‘’  不解释里面的变量</p>
+<p>\n  转义字符</p>
+<p>strlen 函数   strlen() 函数返回字符串的长度。<br>一个汉子三个字符，一个英文一个字符。</p>
+<p>mb_strlen 函数<br>mb_strlen ( string $str [, string $encoding = mb_internal_encoding() ] ) : mixed</p>
+<p>获取一个 string 的长度。 </p>
+<p>参数<br>str<br>    要检查长度的字符串。<br>encoding<br>    encoding 参数为字符编码。如果省略，则使用内部字符编码。</p>
+<p>返回值</p>
+<p>返回具有 encoding 编码的字符串 str 包含的字符数。 多字节的字符被计为 1。</p>
+<p>如果给定的 encoding 无效则返回 FALSE。</p>
+<p>strpos<br>strpos() 函数查找字符串在另一字符串中第一次出现的位置<br>strpos(string,find,start)<br>参数     描述<br>string     必需。规定要搜索的字符串。<br>find     必需。规定要查找的字符串。<br>start     可选。规定在何处开始搜索。</p>
+<p>stripos    不区分大小写。和strpos 函数一个意思</p>
+<p>strrpos<br>定义和用法<br>strrpos() 函数查找字符串在另一字符串中最后一次出现的位置（区分大小写）。</p>
+<p>str_replace<br>定义和用法<br>str_replace() 函数替换字符串中的一些字符（区分大小写）。</p>
+<p>该函数必须遵循下列规则：</p>
+<pre><code>如果搜索的字符串是一个数组，那么它将返回一个数组。
+如果搜索的字符串是一个数组，那么它将对数组中的每个元素进行查找和替换。
+如果同时需要对某个数组进行查找和替换，并且需要执行替换的元素少于查找到的元素的数量，那么多余的元素将用空字符串进行替换。
+如果是对一个数组进行查找，但只对一个字符串进行替换，那么替代字符串将对所有查找到的值起作用。
+</code></pre><p>语法<br>str_replace(find,replace,string,count)</p>
+<p>参数     描述<br>find     必需。规定要查找的值。<br>replace     必需。规定替换 find 中的值的值。<br>string     必需。规定被搜索的字符串。<br>count     可选。一个变量，对替换数进行计数。</p>
+<p>str_ireplace   不区分大小写</p>
+<p>strstr()<br>定义和用法<br>strstr() 函数搜索字符串在另一字符串中是否存在，如果是，返回该字符串及剩余部分，否则返回 FALSE。</p>
+<p>语法<br>strstr(string,search,before_search)<br>参数     描述<br>string     必需。规定被搜索的字符串。<br>search     必需。规定要搜索的字符串。如果该参数是数字，则搜索匹配该数字对应的 ASCII 值的字符。<br>before_search     可选。一个默认值为 “false” 的布尔值。如果设置为 “true”，它将返回 search 参数第一次出现之前的字符串部分。</p>
+<p>stristr  不区分大小写</p>
+<p>substr<br>定义和用法<br>substr() 函数返回字符串的一部分。<br>语法<br>substr(string,start,length)</p>
+<p>参数     描述<br>string     必需。规定要返回其中一部分的字符串。<br>start     必需。规定在字符串的何处开始。<br>    正数 - 在字符串的指定位置开始<br>    负数 - 在从字符串结尾的指定位置开始<br>    0 - 在字符串中的第一个字符处开始</p>
+<p>length     可选。规定要返回的字符串长度。默认是直到字符串的结尾。<br>    正数 - 从 start 参数所在的位置返回<br>    负数 - 从字符串末端返回</p>
+<p>strrchr<br>strrchr() 函数查找字符串在另一个字符串中最后一次出现的位置，并返回从该位置到字符串结尾的所有字符。<br>strrchr(string,char)   取文件后缀名的时候可以用</p>
+<p>explode<br>定义和用法<br>explode() 函数使用一个字符串分割另一个字符串，并返回由字符串组成的数组。<br>注释：”separator” 参数不能是一个空字符串。<br>注释：该函数是二进制安全的。</p>
+<p>explode(separator,string,limit) </p>
+<p>print_r  打印数组</p>
+<p>implode<br>定义和用法</p>
+<p>implode() 函数返回一个由数组元素组合成的字符串。<br>注释：implode() 函数接受两种参数顺序。但是由于历史原因，explode() 是不行的，您必须保证 separator 参数在 string 参数之前才行。<br>注释：implode() 函数的 separator 参数是可选的。但是为了向后兼容，推荐您使用使用两个参数。<br>注释：该函数是二进制安全的。</p>
+<p>语法<br>implode(separator,array)<br>参数     描述<br>separator     可选。规定数组元素之间放置的内容。默认是 “”（空字符串）。<br>array     必需。要组合为字符串的数组。</p>
+<p>trim<br>trim() 函数移除字符串两侧的空白字符或其他预定义字符。</p>
+<p>addslashes() 函数返回在预定义的字符前添加反斜杠的字符串。   防止注入<br>预定义字符是：</p>
+<pre><code>单引号（&apos;）
+双引号（&quot;）
+反斜杠（\）
+NULL
+</code></pre><p>提示：该函数可用于为存储在数据库中的字符串以及数据库查询语句准备合适的字符串。</p>
+<p>htmlspecialchars() 函数把一些预定义的字符转换为 HTML 实体。   防止XSS 漏洞</p>
+<p>预定义的字符是：</p>
+<pre><code>&amp; （和号）成为 &amp;amp;
+&quot; （双引号）成为 &amp;quot;
+&apos; （单引号）成为 &apos;
+&lt; （小于）成为 &amp;lt;
+&gt; （大于）成为 &amp;gt;
+</code></pre><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>定义一个数组<br>打印一个数组 print_r</p>
+<p>索引数组    关联数组</p>
+<p>关联型数组  $arr1 = array(“aa”=&gt;”wuhan”,”bb”=&gt;100,”cc”=&gt;”beijing”);</p>
+<p>数组遍历<br>count($arr1)  计算数组长度</p>
+<p>foreach</p>
+<p>数组的增删改查</p>
+<p>数组的函数<br>count（）  输出数组元素的个数<br>array_key_exists()<br>in_array()<br>array_keys()</p>
+<p>array_change_key_case()<br>array_count_values()<br>array_fill()<br>array_filter()<br>array_values()<br>array_keys()<br>array_push()<br>array_pop()<br>array_shift()<br>array_unshift()<br>sort()  rsort()   usort()   asort()</p>
+<p>ksort()   natsort()    natcasesort()<br>array_merge()<br>array_merge_recursive()<br>array_diff()<br>array_diff_assoc()<br>array_intersect()<br>array_intersect_assoc()<br>array_flip()<br>array_unique()<br>array_reverse()<br>array_sum()<br>shuffle()<br>range()<br>array_rand()</p>
+<p>&nbsp;  表示html 空格的意思</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h1 id="PHP超全局变量"><a href="#PHP超全局变量" class="headerlink" title="PHP超全局变量"></a>PHP超全局变量</h1><p>$GLOBALS</p>
+<p>$_GET</p>
+<p>$_POST</p>
+<p>$_REQUEST == $_GET + $_POST</p>
+<p>fiddler   抓包工具</p>
+<p>Firefox  插件cookie-bro<br>插件  hackbar</p>
+<h1 id="常量-变量-作用域"><a href="#常量-变量-作用域" class="headerlink" title="常量   变量    作用域"></a>常量   变量    作用域</h1><p>常量不能更改<br>define(“PI”, 3.14);<br>defined();  用来检测常量是否被定义</p>
+<p>变量分为：超全局变量；全局变量；局部变量；</p>
+<p>局部变量是针对函数而言，在函数内部的变量。</p>
+<h1 id="会话技术"><a href="#会话技术" class="headerlink" title="会话技术"></a>会话技术</h1><p>主要包括cookie 和 session</p>
+<p>$_SESSION   是保存在服务器端的，server端的。<br>$_COOKIE   是保存在浏览器端的一个数据</p>
+<p>setcookie()</p>
+<p>例子 使用cookie来计算当前页面访问次数。</p>
+<p>第一次设置cookie 当前页面取不出来。</p>
+<p>session 必须依靠cookie才能实现</p>
+<p>session_start();</p>
+<p>session 是依靠cookie值来读取 的。。</p>
+<p>例子  session 登陆测试</p>
+<h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><p>文件包含<br>require  报错不执行<br>include  报错也执行<br>require_once  只执行第一次，重复使用不执行<br>include_once</p>
+<p>文件上传<br>$_FILE</p>
+<p>例子： 文件上传</p>
+<p>move_uploaded_file();</p>
+<p>is_dir();判断当前目录存在么</p>
+<p><strong>DIR</strong>  php 魔术方法</p>
+<p>文件管理的基本函数</p>
+<p>realpath()</p>
+<p>opendir()<br>readdir()</p>
+<p>unlink()  删除文件</p>
+<p>file_get_content<br>file_put_content</p>
+<p>递归技巧</p>
+<p>/<em><br>    $path 目录<br>    $lev 层级 进入一层，目录更深，明显显示出来
+</em>/<br>function showDir($path,$lev=0){<br>    $fh = opendir($path);<br>    while($row = readdir($fh)){<br>        //如果目录为.和..就跳过<br>        if(($row==’.’) || ($row==’..’)){<br>            continue;<br>        }<br>        echo str_repeat(“&nbsp;&nbsp;”, $lev),$row,’<br>‘;<br>        //如果目录里还有目录继续向下读目录<br>        if(is_dir($path.’/‘.$row)){<br>            showdir($path.’/‘.$row,$lev+1);<br>        }<br>    }<br>    closedir($fh);<br>}<br>showDir(‘.’);</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/19/4、bootstrap/" rel="prev" title>
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/19/6、mysql/" rel="next" title>
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-number">1.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-number">2.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP超全局变量"><span class="nav-number">4.</span> <span class="nav-text">PHP超全局变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常量-变量-作用域"><span class="nav-number">5.</span> <span class="nav-text">常量   变量    作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#会话技术"><span class="nav-number">6.</span> <span class="nav-text">会话技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件"><span class="nav-number">7.</span> <span class="nav-text">文件</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">gslaj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gslaj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

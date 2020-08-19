@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="php ==&amp;gt; 连接数据库  ==》 crud mysql是服务端，需要一个客户端来管理 客户端phpmyadmin  —  进入mysql   配置phpmyadmin到目录找文件C:\wamp\apps\phpmyadmin4.1.14编辑文件config.inc.php（1）$cfg[‘Servers’][$i][‘password’] = ‘’; //修改密码加入密码就能访问 （2）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gslaj&#39;s blog">
+<meta property="og:url" content="http://yoursite.com/2020/08/19/6、mysql/index.html">
+<meta property="og:site_name" content="gslaj&#39;s blog">
+<meta property="og:description" content="php ==&amp;gt; 连接数据库  ==》 crud mysql是服务端，需要一个客户端来管理 客户端phpmyadmin  —  进入mysql   配置phpmyadmin到目录找文件C:\wamp\apps\phpmyadmin4.1.14编辑文件config.inc.php（1）$cfg[‘Servers’][$i][‘password’] = ‘’; //修改密码加入密码就能访问 （2）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-02-10T13:38:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gslaj&#39;s blog">
+<meta name="twitter:description" content="php ==&amp;gt; 连接数据库  ==》 crud mysql是服务端，需要一个客户端来管理 客户端phpmyadmin  —  进入mysql   配置phpmyadmin到目录找文件C:\wamp\apps\phpmyadmin4.1.14编辑文件config.inc.php（1）$cfg[‘Servers’][$i][‘password’] = ‘’; //修改密码加入密码就能访问 （2）">
+
+<link rel="canonical" href="http://yoursite.com/2020/08/19/6、mysql/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | gslaj's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">gslaj's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/6、mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-10 21:38:17" itemprop="dateModified" datetime="2020-02-10T21:38:17+08:00">2020-02-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>php ==&gt; 连接数据库  ==》 crud</p>
+<p>mysql是服务端，需要一个客户端来管理</p>
+<p>客户端<br>phpmyadmin  —  进入mysql  </p>
+<p>配置phpmyadmin<br>到目录找文件<br>C:\wamp\apps\phpmyadmin4.1.14<br>编辑文件<br>config.inc.php<br>（1）<br>$cfg[‘Servers’][$i][‘password’] = ‘’; //修改密码<br>加入密码就能访问</p>
+<p>（2）<br>$cfg[‘Servers’][$i][‘auth_type’] = ‘cookie’;<br>//$cfg[‘Servers’][$i][‘auth_type’] = ‘config’;<br>$cfg[‘Servers’][$i][‘user’] = ‘root’;<br>$cfg[‘Servers’][$i][‘password’] = ‘’;</p>
+<p>注释掉config//打开cookie。不用写密码。<br>打开连接，显示密码登陆界面，输入密码登陆。</p>
+<p>console —-  命令行连接</p>
+<p>打开mysql命令行，输入密码就能进入，使用命令控制</p>
+<p>cmd<br>需要配置一个环境变量<br>C:\wamp\bin\mysql\mysql5.6.17\bin   加入环境变量里</p>
+<p>命令  mysql -uroot -p<br>    输入密码</p>
+<p>使用navicat  连接</p>
+<p>认识mysql的基本操作</p>
+<p>数据库<br>表<br>字段<br>列<br>行<br>记录</p>
+<p>命令<br>show databases;//列出数据库</p>
+<p>set names utf8;  //设置编码格式，防止乱码</p>
+<p>use databasename；  //使用具体的数据库</p>
+<p>show tables;  //展示一个具体数据库下面的表</p>
+<p>create database 数据库名； //创建一个数据库</p>
+<p>drop database  数据库名；  //删除一个数据库</p>
+<h1 id="mysql-的数据类型"><a href="#mysql-的数据类型" class="headerlink" title="mysql 的数据类型"></a>mysql 的数据类型</h1><p>数值型</p>
+<p>日期时间型</p>
+<p>字符串型<br>char<br>varchar<br>text<br>blob</p>
+<p>enum  单选</p>
+<p>set   多选</p>
+<h1 id="mysql-的DML-操作"><a href="#mysql-的DML-操作" class="headerlink" title="mysql 的DML 操作"></a>mysql 的DML 操作</h1><p>DML 操作就是增删改操作</p>
+<p>约束条件</p>
+<p>create table user(<br>    id int unsigned not null auto_increment,<br>    name varchar(30) not null comment ‘名称’,<br>    password varchar(30) not null comment ‘密码’,<br>    address varchar(50) not null comment ‘地址’,<br>    email varchar(50) not null comment ‘邮箱’,<br>    primary key (id),<br>    unique key (name)<br>)engine=MyISAM default charset=”utf8” comment ‘用户表’;</p>
+<p>DROP TABLE IF EXISTS user;</p>
+<p>约束条件<br>not null   不允许为null<br>default  默认值<br>primary key<br>unique key  键值唯一<br>auto_increment int类型  自增长<br>comment 字段注释</p>
+<p>表的修改<br>alter table test001 add column age int not null;<br>alter table test001 drop column age;</p>
+<p>insert  插入单条，插入多条</p>
+<p>truncate user;  //清空表</p>
+<h1 id="数据库查询操作"><a href="#数据库查询操作" class="headerlink" title="数据库查询操作"></a>数据库查询操作</h1><p>DQL操作详解{基本查询/连接查询/子查询/联合查询}</p>
+<p>基本查询</p>
+<p>create table student(<br>    id int not null primary key auto_increment,<br>    name varchar(10) not null,<br>    age int not null,<br>    classId int not null<br>);</p>
+<p>insert into student(name,age,classId) values(“诸葛亮”,21,1),(“诸葛金”,23,2),(“张飞”,25,1),(“张辽”,32,3),(“郭嘉”,22,3),(“关羽”,23,1),(“典韦”,27,3),(“许褚”,41,3),(“赵云”,20,1),(“陈宫”,32,5),(“周瑜”,24,2),(“陆逊”,18,2),(“曹仁”,33,33),(“夏侯渊”,32,3);</p>
+<p>create table class(<br>    id int not null primary key auto_increment,<br>    className varchar(10) not null<br>);</p>
+<p>insert into class(className) values(“蜀国”),(“吴国”),(“魏国”);</p>
+<p>select </p>
+<p>基本查询<br>select * from 表名<br>select id from name</p>
+<p>select 1,2,3,4</p>
+<p>select 字段名1,字段名2,…… from 表名 where 限制条件；</p>
+<p>where 子句</p>
+<p>比较运算符  &gt;  &lt;  &gt;=   &lt;=<br>逻辑运算符 and  or  </p>
+<p>between  between  and<br>in<br>like的用法<br>like 搜索中经常用的%%</p>
+<p>张%   张xxx<br>%张   xxx张<br>%张%   xxx张xxx</p>
+<p>分组查询</p>
+<p>group by<br>count<br>max<br>min<br>sum</p>
+<p>having  分组条件  之前一定有group by</p>
+<p>order by  排序</p>
+<p>limit  分页  推荐</p>
+<p>limit n<br>limit n,n</p>
+<h1 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h1><p>关键字  join on<br>涉及多个表</p>
+<p>select student.id,student.name,student.age class.className from student join class on student.classId =class.id;</p>
+<p>left join on<br>全部查询出来</p>
+<h1 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h1><p>算数运算符</p>
+<p>in<br>exists<br>not exists</p>
+<p>查询小于平均年龄的人</p>
+<p>查询出class班&gt;3人  所有的人</p>
+<h1 id="联合查询"><a href="#联合查询" class="headerlink" title="联合查询"></a>联合查询</h1><p>union  字段必须一致</p>
+<h1 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h1><p>floor 向下取整<br>rand<br>left<br>right</p>
+<p>position</p>
+<p>渗透 中常用的内置函数</p>
+<p>@@datadir  函数</p>
+<p>@@version_compile_os  函数</p>
+<p>database()   函数</p>
+<p>user()  </p>
+<p>concat(str1,str2)</p>
+<p>load_file(“c:\“);</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/19/5、PHP基础/" rel="prev" title>
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/19/7、PHP操纵mysql/" rel="next" title>
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql-的数据类型"><span class="nav-number">1.</span> <span class="nav-text">mysql 的数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql-的DML-操作"><span class="nav-number">2.</span> <span class="nav-text">mysql 的DML 操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库查询操作"><span class="nav-number">3.</span> <span class="nav-text">数据库查询操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#连接查询"><span class="nav-number">4.</span> <span class="nav-text">连接查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子查询"><span class="nav-number">5.</span> <span class="nav-text">子查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#联合查询"><span class="nav-number">6.</span> <span class="nav-text">联合查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内置函数"><span class="nav-number">7.</span> <span class="nav-text">内置函数</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">gslaj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gslaj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

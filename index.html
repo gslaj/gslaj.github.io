@@ -1,100 +1,24 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
-
-<link rel="stylesheet" href="/css/main.css?v=7.1.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.1.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="gslaj&#39;s blog">
@@ -104,19 +28,16 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gslaj&#39;s blog">
 
+<link rel="canonical" href="http://yoursite.com/">
 
 
-
-
-  
-  
-  <link rel="canonical" href="http://yoursite.com/">
-
-
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -128,15 +49,8 @@
 
 
 
-
-
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -145,9 +59,8 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -161,96 +74,53 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">gslaj's blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">gslaj's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
 
 
+
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home menu-item-active">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-
-      
-      
-    </ul>
-  
-
-  
-
-  
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -258,418 +128,61 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-            
 
-          
-          <div id="content" class="content">
+          <div class="content index posts-expand">
             
-  <section id="posts" class="posts-expand">
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/06/docker/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/8、PHP面向对象编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="gslaj">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="gslaj's blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/06/docker/" class="post-title-link" itemprop="url">Docker学习笔记</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/19/8、PHP面向对象编程/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-06 17:36:16 / 修改时间：17:32:09" itemprop="dateCreated datePublished" datetime="2019-08-06T17:36:16+08:00">2019-08-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>使用vulhub学习漏洞复现，那么需要学习一下docker。前提应安装好了docker。<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/06/docker/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/06/Linux学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="gslaj">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="gslaj's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/06/Linux学习笔记/" class="post-title-link" itemprop="url">Linux学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-06 17:36:13 / 修改时间：17:32:09" itemprop="dateCreated datePublished" datetime="2019-08-06T17:36:13+08:00">2019-08-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Linux学习笔记主要记录平时学习Linux的过程，可能比较零碎，使用Linux系统是一个长期的过程，非常的复杂。期间被劝退过很多次。但是学习技术的时候也绕不开。尤其研究网络安全相关，很多都要使用Linux操作系统。<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/06/Linux学习笔记/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/24/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="gslaj">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="gslaj's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/24/test/" class="post-title-link" itemprop="url">markdown语法格式用法</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-24 08:21:13" itemprop="dateCreated datePublished" datetime="2019-04-24T08:21:13+08:00">2019-04-24</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-06 09:49:17" itemprop="dateModified" datetime="2019-05-06T09:49:17+08:00">2019-05-06</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-03 23:24:49" itemprop="dateModified" datetime="2020-03-03T23:24:49+08:00">2020-03-03</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -677,160 +190,234 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <p>OOP</p>
+<p>类和对象<br>class Person{<br>    //属性<br>    //修饰符  public  protected  private<br>    public $name = “ren”;<br>    public $age = 20;</p>
+<pre><code>static public $location = &quot;diqiu&quot;;
 
-      
-        
-          <h1 id="标题markdown语法格式"><a href="#标题markdown语法格式" class="headerlink" title="标题markdown语法格式"></a>标题markdown语法格式</h1><h2 id="副标题基本用法"><a href="#副标题基本用法" class="headerlink" title="副标题基本用法"></a>副标题基本用法</h2><p>markdown语法基本操作</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/24/test/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+const public PI = 3.1415926;
+public function testConst(){
+    echo Person::PI;
+}
+
+//方法
+public function eat(){
+    echo &quot;chifan&quot;;
+}
+
+public function sleep(){
+    echo &quot;shuijiao&quot;;
+}
+
+public add($a,$b){
+    echo $a+$b;
+}
+
+static public function sport(){
+    echo &quot;yundong &quot;;
+}
+</code></pre><p>}</p>
+<p>//对象<br>$xiaoming = new Person();<br>$xiaogang = new Person();</p>
+<p>echo $xiaoming-&gt;name;<br>echo “<br>“;</p>
+<p>$xiaoming-&gt;eat();<br>echo “<br>“;</p>
+<p>$xiaoming-&gt;sleep();<br>echo “<br>“;</p>
+<p>$xiaoming-&gt;add(1,3);</p>
+<p>$xiaoming-&gt;name = “xiaoming”;<br>$xiaoming-&gt;age = 18;</p>
+<p>//this 关键字<br>在类的方法里面调用类的属性，使用this关键字</p>
+<p>static  const</p>
+<p>static 静态修饰符可以修饰属性和方法</p>
+<p>使用类来调用<br>Person::$location;<br>Person::sport();<br>静态方法里面只能调用类里面的静态变量；</p>
+<p>const 常量不能修改。</p>
+<p>类的继承</p>
+<p>构造方法  析构方法</p>
+<p>class Human{</p>
+<pre><code>public $name;
+public $food;
+
+public function __construct(){
+
+    echo &quot;zheshigouzaofangfa&lt;br/&gt;&quot;;
+}
+
+public function eat(){
+    echo $this-&gt;name.&quot;chi&quot;.$this-&gt;food.&quot;&lt;br/&gt;&quot;;
+}
+
+public function __destruct(){
+
+    echo &quot;zheshi xigoufangfa&lt;br/&gt;&quot;;
+}
+</code></pre><p>}<br>$batman = new Human();<br>$batman-&gt;name = “batman”;<br>$batman-&gt;food = “niupai”;<br>$batman-&gt;eat();</p>
+<p>构造方法对实例进行初始化</p>
+<p>继承</p>
+<p>extends</p>
+<p>class Father{<br>    public function Money(){<br>        echo “100000”;<br>    }<br>}</p>
+<p>class Son extends Father{</p>
+<pre><code>public function useMoney(){
+    echo &quot;-1000&quot;;
+}
+
+//chongxie
+</code></pre><p>public function Money(){<br>    echo “2000”;<br>}</p>
+<p>}</p>
+<p>//访问修饰符</p>
+<pre><code>public     protected     private
+</code></pre><p>外部      Y           N             N<br>子类中    Y            Y            N<br>本类中    Y            Y             Y</p>
+<p>self parent</p>
+<p>self  本类<br>parent   父类</p>
+<p>final  不能继承</p>
+<p>abstract  抽象类<br>抽象类不能实例化，只能被继承<br>里面有两种方法，普通方法和抽象方法</p>
+<p>//抽象方法没有方法体</p>
+<p>接口<br>interface</p>
+<p>implement</p>
+<p>抽象类：相当于一类事物的规范；<br>接口：相当于组成事物的零件的规范；</p>
+<p>设计模式：单例模式</p>
+<p>类不允许继承<br>final<br>构造函数要私有化<br>private</p>
+<p>本类中写一个静态实例<br>static $single</p>
+<p>final class MySQL{</p>
+<pre><code>public $rand;
+static public $single;
+
+private function __construct(){
+    $this-&gt;rand = rand(10000,99999);
+    echo $this-&gt;rand.&quot;&lt;br/&gt;&quot;;
+}
+
+static public function getInstance(){
+    if(is_null(self::$single)){
+        self::$single = new MySQL();
+    }
+    return self::$single;
+}
+</code></pre><p>}<br>$A = MySQL::getInstance();</p>
+<p>oop实现mysqlDB类</p>
+<p>$mysql = new mysqli(“localhost”,”root”,””,””);</p>
+<p>$mysql-&gt;set_charset(“utf8”);</p>
+<p>$sql = “select * from student”;<br>$reslut = $mysql-&gt;query($sql);</p>
+<p>$data = array();<br>while($row = $reslut-&gt;fetch_assoc()){</p>
+<pre><code>$data[] = $row;
+</code></pre><p>}<br>var_dump($data);</p>
+<p>phpstrom 修改默认注释<br>file—》setting—-》editor—-》file and code templates—&gt;includes—–&gt;php file header</p>
+<p>abstract class aDB{<br>    /*<br>    //连接数据库<br>    abstract public function conn();</p>
+<pre><code>//查询多行数据
+abstract public function getAll($sql);
+
+//单行数据
+abstract public function getRow($sql);
+
+//查询单个数据 如 count（*）
+abstract public function getOne($sql);
+</code></pre><p>//执行删除/修改/更新的sql操作<br>    abstract public function Exec($sql);</p>
+<p>//返回上一条insert语句产生的主键值<br>    abstract public function lashId();</p>
+<p>//返回上一条语句影响的行数<br>    abstract public function affectRows();</p>
+<p>}</p>
+<p>class MySql extends aDB{<br>    $link = null;</p>
+<pre><code>public function __construct(){
+    $this-&gt;link = new mysqli(&quot;localhost&quot;,&quot;root&quot;,&quot;123&quot;,&quot;test001&quot;);
+    $this-&gt;link-&gt;set_charset(&quot;utf8&quot;);
+}
+
+public function conn(){
+    return $this-&gt;link;
+
+}
+
+public function getAll($sql){
+    $res = $this-&gt;link-&gt;query($sql);
+    $data = array();
+    while($row = $res-&gt;fetch_assoc()){
+        $data[] = $row;
+    }
+    return $data;
+}
+
+public function getRow($sql){
+    $res = $this-&gt;link-&gt;query($sql);
+    $row = $res-&gt;fetch_assoc();
+    return $row;
+}
+
+public function getOne($sql){
+    $res = $this-&gt;link-&gt;query($sql);
+    $data = $res-&gt;fetch_row()[0];
+    return $data;
+}
+
+public function Exec($sql){
+    $this-&gt;link-&gt;query($sql);
+}
+
+public function lastId(){
+    return $this-&gt;link-&gt;insert_id;
+}
+
+public function affectRows(){
+    return $this-&gt;link-&gt;affected_rows;
+}
+</code></pre><p>}</p>
+<p>PDO 操作数据库<br>预处理</p>
+<p>&lt;?php<br>/<em> Connect to an ODBC database using driver invocation </em>/<br>$dsn = ‘mysql:dbname=test001;host=127.0.0.1;charset=utf8’;<br>$user = ‘root’;<br>$password = ‘123’;</p>
+<p>try {<br>    $pdo = new PDO($dsn, $user, $password);<br>} catch (PDOException $e) {<br>    echo ‘Connection failed: ‘ . $e-&gt;getMessage();<br>}</p>
+<p>//pdo的预处理</p>
+<p>$sql = “select * from student where id&gt;? and age&gt;?”;<br>$pdo-&gt;prepare($sql);<br>$id = 5;<br>$age = 30;<br>$stat-&gt;bindParam(1,$id);<br>$stat-&gt;bindParam(2,$age);<br>$stat-&gt;execute();</p>
+<p>$array = $stat-&gt;fetchAll();</p>
+<p>var_dump($array);</p>
+
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/19/hello-world/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/7、PHP操纵mysql/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="gslaj">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="gslaj's blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/19/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/19/7、PHP操纵mysql/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-04-19 11:18:16" itemprop="dateCreated datePublished" datetime="2019-04-19T11:18:16+08:00">2019-04-19</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-24 09:25:47" itemprop="dateModified" datetime="2019-04-24T09:25:47+08:00">2019-04-24</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-12 17:35:57" itemprop="dateModified" datetime="2020-02-12T17:35:57+08:00">2020-02-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -838,209 +425,1056 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h1 id="php操纵mysql"><a href="#php操纵mysql" class="headerlink" title="php操纵mysql"></a>php操纵mysql</h1><p>连接函数<br>mysqli_connect()<br>mysqli_query()</p>
+<p>error_reporting()  </p>
+<p>mysqli_fetch_array()</p>
+<p>mysqli_fetch_row()</p>
+<p>mysqli_fetch_assoc()</p>
+<p>mysql_affected_rows()</p>
+<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><p>大项目  都是由一个个小项目的叠加实现的</p>
+<p>项目思路：<br>1、简单功能模块划分<br>先实现核心功能<br>查询–展示</p>
+<p>增加<br>修改<br>删除</p>
+<p>header(“Refresh:3;url=index.php”);<br>延迟3秒后，自动跳转</p>
+<p>require “./show.html”;</p>
+<p>navicat  进行数据库的导入导出</p>
+<p>select student.id,student.name,student.age,class.className from student inner join class on student.classId = class.id</p>
+<p>$sql = “select * from student where id = $id”;<br>$rowStudent = mysqli_fetch_assoc($result);</p>
+<p>$sqli = “select * from class”;<br>$result = mysqli_query($link,$sqli);<br>$dataClass = array();<br>while($rowData = mysqli_fetch_assoc($result))<br>{<br>    $dataClass[] = $rowData;<br>}<br>    require “./update.html”;</p>
+<p>&lt;?php<br>    foreach($dataClass as $key =&gt; $value){<br>?&gt;</p>
+<p><option value="<?php echo $value['id'];?>"><br>&lt;?php if($rowStudent[‘classId’] == $value[‘id’]) echo “selected”;?&gt;&gt;<br>&lt;?php echo $value[“className”];?&gt;<br></option><br>&lt;?php }?&gt;</p>
+<p>$sql = “update student set name = ‘$name’ ,age = $age, classId = $classId where id = $id”;</p>
+<p>$sql = “insert into student(name,age,classId) values(‘$name’,$age,$classId)”;</p>
+<p>if(!$res){<br>    echo “插入数据失败<br>“;<br>    echo “<a href="./add.php">重新添加</a>“;<br>}</p>
+<p>$sql = “select student.id,student.name,student.age,class.className from student inner join class on student.classId=class.id and name like ‘%$search%’”;</p>
 
       
-        
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/6、mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/19/6、mysql/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-10 21:38:17" itemprop="dateModified" datetime="2020-02-10T21:38:17+08:00">2020-02-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>php ==&gt; 连接数据库  ==》 crud</p>
+<p>mysql是服务端，需要一个客户端来管理</p>
+<p>客户端<br>phpmyadmin  —  进入mysql  </p>
+<p>配置phpmyadmin<br>到目录找文件<br>C:\wamp\apps\phpmyadmin4.1.14<br>编辑文件<br>config.inc.php<br>（1）<br>$cfg[‘Servers’][$i][‘password’] = ‘’; //修改密码<br>加入密码就能访问</p>
+<p>（2）<br>$cfg[‘Servers’][$i][‘auth_type’] = ‘cookie’;<br>//$cfg[‘Servers’][$i][‘auth_type’] = ‘config’;<br>$cfg[‘Servers’][$i][‘user’] = ‘root’;<br>$cfg[‘Servers’][$i][‘password’] = ‘’;</p>
+<p>注释掉config//打开cookie。不用写密码。<br>打开连接，显示密码登陆界面，输入密码登陆。</p>
+<p>console —-  命令行连接</p>
+<p>打开mysql命令行，输入密码就能进入，使用命令控制</p>
+<p>cmd<br>需要配置一个环境变量<br>C:\wamp\bin\mysql\mysql5.6.17\bin   加入环境变量里</p>
+<p>命令  mysql -uroot -p<br>    输入密码</p>
+<p>使用navicat  连接</p>
+<p>认识mysql的基本操作</p>
+<p>数据库<br>表<br>字段<br>列<br>行<br>记录</p>
+<p>命令<br>show databases;//列出数据库</p>
+<p>set names utf8;  //设置编码格式，防止乱码</p>
+<p>use databasename；  //使用具体的数据库</p>
+<p>show tables;  //展示一个具体数据库下面的表</p>
+<p>create database 数据库名； //创建一个数据库</p>
+<p>drop database  数据库名；  //删除一个数据库</p>
+<h1 id="mysql-的数据类型"><a href="#mysql-的数据类型" class="headerlink" title="mysql 的数据类型"></a>mysql 的数据类型</h1><p>数值型</p>
+<p>日期时间型</p>
+<p>字符串型<br>char<br>varchar<br>text<br>blob</p>
+<p>enum  单选</p>
+<p>set   多选</p>
+<h1 id="mysql-的DML-操作"><a href="#mysql-的DML-操作" class="headerlink" title="mysql 的DML 操作"></a>mysql 的DML 操作</h1><p>DML 操作就是增删改操作</p>
+<p>约束条件</p>
+<p>create table user(<br>    id int unsigned not null auto_increment,<br>    name varchar(30) not null comment ‘名称’,<br>    password varchar(30) not null comment ‘密码’,<br>    address varchar(50) not null comment ‘地址’,<br>    email varchar(50) not null comment ‘邮箱’,<br>    primary key (id),<br>    unique key (name)<br>)engine=MyISAM default charset=”utf8” comment ‘用户表’;</p>
+<p>DROP TABLE IF EXISTS user;</p>
+<p>约束条件<br>not null   不允许为null<br>default  默认值<br>primary key<br>unique key  键值唯一<br>auto_increment int类型  自增长<br>comment 字段注释</p>
+<p>表的修改<br>alter table test001 add column age int not null;<br>alter table test001 drop column age;</p>
+<p>insert  插入单条，插入多条</p>
+<p>truncate user;  //清空表</p>
+<h1 id="数据库查询操作"><a href="#数据库查询操作" class="headerlink" title="数据库查询操作"></a>数据库查询操作</h1><p>DQL操作详解{基本查询/连接查询/子查询/联合查询}</p>
+<p>基本查询</p>
+<p>create table student(<br>    id int not null primary key auto_increment,<br>    name varchar(10) not null,<br>    age int not null,<br>    classId int not null<br>);</p>
+<p>insert into student(name,age,classId) values(“诸葛亮”,21,1),(“诸葛金”,23,2),(“张飞”,25,1),(“张辽”,32,3),(“郭嘉”,22,3),(“关羽”,23,1),(“典韦”,27,3),(“许褚”,41,3),(“赵云”,20,1),(“陈宫”,32,5),(“周瑜”,24,2),(“陆逊”,18,2),(“曹仁”,33,33),(“夏侯渊”,32,3);</p>
+<p>create table class(<br>    id int not null primary key auto_increment,<br>    className varchar(10) not null<br>);</p>
+<p>insert into class(className) values(“蜀国”),(“吴国”),(“魏国”);</p>
+<p>select </p>
+<p>基本查询<br>select * from 表名<br>select id from name</p>
+<p>select 1,2,3,4</p>
+<p>select 字段名1,字段名2,…… from 表名 where 限制条件；</p>
+<p>where 子句</p>
+<p>比较运算符  &gt;  &lt;  &gt;=   &lt;=<br>逻辑运算符 and  or  </p>
+<p>between  between  and<br>in<br>like的用法<br>like 搜索中经常用的%%</p>
+<p>张%   张xxx<br>%张   xxx张<br>%张%   xxx张xxx</p>
+<p>分组查询</p>
+<p>group by<br>count<br>max<br>min<br>sum</p>
+<p>having  分组条件  之前一定有group by</p>
+<p>order by  排序</p>
+<p>limit  分页  推荐</p>
+<p>limit n<br>limit n,n</p>
+<h1 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h1><p>关键字  join on<br>涉及多个表</p>
+<p>select student.id,student.name,student.age class.className from student join class on student.classId =class.id;</p>
+<p>left join on<br>全部查询出来</p>
+<h1 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h1><p>算数运算符</p>
+<p>in<br>exists<br>not exists</p>
+<p>查询小于平均年龄的人</p>
+<p>查询出class班&gt;3人  所有的人</p>
+<h1 id="联合查询"><a href="#联合查询" class="headerlink" title="联合查询"></a>联合查询</h1><p>union  字段必须一致</p>
+<h1 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h1><p>floor 向下取整<br>rand<br>left<br>right</p>
+<p>position</p>
+<p>渗透 中常用的内置函数</p>
+<p>@@datadir  函数</p>
+<p>@@version_compile_os  函数</p>
+<p>database()   函数</p>
+<p>user()  </p>
+<p>concat(str1,str2)</p>
+<p>load_file(“c:\“);</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/5、PHP基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/19/5、PHP基础/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-12 21:19:30" itemprop="dateModified" datetime="2020-01-12T21:19:30+08:00">2020-01-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>&lt;?php<br>    //单行注释<br>    /<em><br>        多行注释
+    </em>/</p>
+<p>?&gt;</p>
+<p>echo “”;  输出语句</p>
+<p>phpinfo(); 输出版本</p>
+<p>变量</p>
+<p>以$开头，加变量名。$a.不能以数字开头<br>变量区分大小写。$a 不一样$A</p>
+<p>变量的类型：<br>isset()<br>isset() 函数用于检测变量是否已设置并且非 NULL。</p>
+<p>var_dump():解释布尔型变量。<br>var_dump() 函数用于输出变量的相关信息。<br>var_dump() 函数显示关于一个或多个表达式的结构信息，包括表达式的类型与值。数组将递归展开值，通过缩进显示其结构。</p>
+<p>gettype<br>gettype() 函数用于获取变量的类型。</p>
+<p>整型：  integer<br>浮点型：  double<br>字符串：  string<br>布尔：  boolean   false  true<br>数组：   索引数组，关联数组   array<br>NULL：  NULL<br>资源：<br>对象：</p>
+<p>运算符：</p>
+<p>数学运算符：+  -   *   /   %</p>
+<p>%取模运算。取余数</p>
+<p>++    –</p>
+<p>前++  ；  $++a  先+1，后运算</p>
+<p>后++  ：$a++   先运算，后+1</p>
+<p>前–<br>后–</p>
+<p>比较运算符：&gt;   &gt;=   &lt;   &lt;=  !=  ==  ===   !==</p>
+<p>比较运算符返回的是布尔类型；</p>
+<p>===横等于  需要两个变量的类型也要相等。<br>!==横不等于   </p>
+<p>$a = 10;$b=”10”;<br>$a==$b  true<br>$a===$b  false   类型也要相同</p>
+<p>三元运算符<br>? : </p>
+<p>逻辑运算符<br>&amp;&amp;与   ||或   !非</p>
+<p>字符串运算符<br>.<br>“this”.”is”</p>
+<p>三大控制结构</p>
+<p>1、顺序</p>
+<p>2、选择 if   switch</p>
+<pre><code>if (condition) {
+    # code...
+}
+
+switch (variable) {
+    case &apos;value&apos;:
+        # code...
+        break;
+
+    default:
+        # code...
+        break;
+}
+</code></pre><p>3、循环结构</p>
+<p>while ( &lt;= 10) {</p>
+<pre><code># code...
+</code></pre><p>}</p>
+<p>for ($i=0; $i &lt; ; $i++) { </p>
+<pre><code># code...
+</code></pre><p>}</p>
+<pre><code>do{
+
+}while ( &lt;= 10);
+</code></pre><p>break  跳出循环</p>
+<p>continue   略过本次循环，继续执行下面，只对本次循环有效</p>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>header(“Content-type:text/html;charset=utf-8”);  //用于接近中文乱码。</p>
+<p>字符串基本知识和常用函数</p>
+<p>“”  ‘’  定义字符串的不同和区别<br>“”  解释里面的变量<br>‘’  不解释里面的变量</p>
+<p>\n  转义字符</p>
+<p>strlen 函数   strlen() 函数返回字符串的长度。<br>一个汉子三个字符，一个英文一个字符。</p>
+<p>mb_strlen 函数<br>mb_strlen ( string $str [, string $encoding = mb_internal_encoding() ] ) : mixed</p>
+<p>获取一个 string 的长度。 </p>
+<p>参数<br>str<br>    要检查长度的字符串。<br>encoding<br>    encoding 参数为字符编码。如果省略，则使用内部字符编码。</p>
+<p>返回值</p>
+<p>返回具有 encoding 编码的字符串 str 包含的字符数。 多字节的字符被计为 1。</p>
+<p>如果给定的 encoding 无效则返回 FALSE。</p>
+<p>strpos<br>strpos() 函数查找字符串在另一字符串中第一次出现的位置<br>strpos(string,find,start)<br>参数     描述<br>string     必需。规定要搜索的字符串。<br>find     必需。规定要查找的字符串。<br>start     可选。规定在何处开始搜索。</p>
+<p>stripos    不区分大小写。和strpos 函数一个意思</p>
+<p>strrpos<br>定义和用法<br>strrpos() 函数查找字符串在另一字符串中最后一次出现的位置（区分大小写）。</p>
+<p>str_replace<br>定义和用法<br>str_replace() 函数替换字符串中的一些字符（区分大小写）。</p>
+<p>该函数必须遵循下列规则：</p>
+<pre><code>如果搜索的字符串是一个数组，那么它将返回一个数组。
+如果搜索的字符串是一个数组，那么它将对数组中的每个元素进行查找和替换。
+如果同时需要对某个数组进行查找和替换，并且需要执行替换的元素少于查找到的元素的数量，那么多余的元素将用空字符串进行替换。
+如果是对一个数组进行查找，但只对一个字符串进行替换，那么替代字符串将对所有查找到的值起作用。
+</code></pre><p>语法<br>str_replace(find,replace,string,count)</p>
+<p>参数     描述<br>find     必需。规定要查找的值。<br>replace     必需。规定替换 find 中的值的值。<br>string     必需。规定被搜索的字符串。<br>count     可选。一个变量，对替换数进行计数。</p>
+<p>str_ireplace   不区分大小写</p>
+<p>strstr()<br>定义和用法<br>strstr() 函数搜索字符串在另一字符串中是否存在，如果是，返回该字符串及剩余部分，否则返回 FALSE。</p>
+<p>语法<br>strstr(string,search,before_search)<br>参数     描述<br>string     必需。规定被搜索的字符串。<br>search     必需。规定要搜索的字符串。如果该参数是数字，则搜索匹配该数字对应的 ASCII 值的字符。<br>before_search     可选。一个默认值为 “false” 的布尔值。如果设置为 “true”，它将返回 search 参数第一次出现之前的字符串部分。</p>
+<p>stristr  不区分大小写</p>
+<p>substr<br>定义和用法<br>substr() 函数返回字符串的一部分。<br>语法<br>substr(string,start,length)</p>
+<p>参数     描述<br>string     必需。规定要返回其中一部分的字符串。<br>start     必需。规定在字符串的何处开始。<br>    正数 - 在字符串的指定位置开始<br>    负数 - 在从字符串结尾的指定位置开始<br>    0 - 在字符串中的第一个字符处开始</p>
+<p>length     可选。规定要返回的字符串长度。默认是直到字符串的结尾。<br>    正数 - 从 start 参数所在的位置返回<br>    负数 - 从字符串末端返回</p>
+<p>strrchr<br>strrchr() 函数查找字符串在另一个字符串中最后一次出现的位置，并返回从该位置到字符串结尾的所有字符。<br>strrchr(string,char)   取文件后缀名的时候可以用</p>
+<p>explode<br>定义和用法<br>explode() 函数使用一个字符串分割另一个字符串，并返回由字符串组成的数组。<br>注释：”separator” 参数不能是一个空字符串。<br>注释：该函数是二进制安全的。</p>
+<p>explode(separator,string,limit) </p>
+<p>print_r  打印数组</p>
+<p>implode<br>定义和用法</p>
+<p>implode() 函数返回一个由数组元素组合成的字符串。<br>注释：implode() 函数接受两种参数顺序。但是由于历史原因，explode() 是不行的，您必须保证 separator 参数在 string 参数之前才行。<br>注释：implode() 函数的 separator 参数是可选的。但是为了向后兼容，推荐您使用使用两个参数。<br>注释：该函数是二进制安全的。</p>
+<p>语法<br>implode(separator,array)<br>参数     描述<br>separator     可选。规定数组元素之间放置的内容。默认是 “”（空字符串）。<br>array     必需。要组合为字符串的数组。</p>
+<p>trim<br>trim() 函数移除字符串两侧的空白字符或其他预定义字符。</p>
+<p>addslashes() 函数返回在预定义的字符前添加反斜杠的字符串。   防止注入<br>预定义字符是：</p>
+<pre><code>单引号（&apos;）
+双引号（&quot;）
+反斜杠（\）
+NULL
+</code></pre><p>提示：该函数可用于为存储在数据库中的字符串以及数据库查询语句准备合适的字符串。</p>
+<p>htmlspecialchars() 函数把一些预定义的字符转换为 HTML 实体。   防止XSS 漏洞</p>
+<p>预定义的字符是：</p>
+<pre><code>&amp; （和号）成为 &amp;amp;
+&quot; （双引号）成为 &amp;quot;
+&apos; （单引号）成为 &apos;
+&lt; （小于）成为 &amp;lt;
+&gt; （大于）成为 &amp;gt;
+</code></pre><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>定义一个数组<br>打印一个数组 print_r</p>
+<p>索引数组    关联数组</p>
+<p>关联型数组  $arr1 = array(“aa”=&gt;”wuhan”,”bb”=&gt;100,”cc”=&gt;”beijing”);</p>
+<p>数组遍历<br>count($arr1)  计算数组长度</p>
+<p>foreach</p>
+<p>数组的增删改查</p>
+<p>数组的函数<br>count（）  输出数组元素的个数<br>array_key_exists()<br>in_array()<br>array_keys()</p>
+<p>array_change_key_case()<br>array_count_values()<br>array_fill()<br>array_filter()<br>array_values()<br>array_keys()<br>array_push()<br>array_pop()<br>array_shift()<br>array_unshift()<br>sort()  rsort()   usort()   asort()</p>
+<p>ksort()   natsort()    natcasesort()<br>array_merge()<br>array_merge_recursive()<br>array_diff()<br>array_diff_assoc()<br>array_intersect()<br>array_intersect_assoc()<br>array_flip()<br>array_unique()<br>array_reverse()<br>array_sum()<br>shuffle()<br>range()<br>array_rand()</p>
+<p>&nbsp;  表示html 空格的意思</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h1 id="PHP超全局变量"><a href="#PHP超全局变量" class="headerlink" title="PHP超全局变量"></a>PHP超全局变量</h1><p>$GLOBALS</p>
+<p>$_GET</p>
+<p>$_POST</p>
+<p>$_REQUEST == $_GET + $_POST</p>
+<p>fiddler   抓包工具</p>
+<p>Firefox  插件cookie-bro<br>插件  hackbar</p>
+<h1 id="常量-变量-作用域"><a href="#常量-变量-作用域" class="headerlink" title="常量   变量    作用域"></a>常量   变量    作用域</h1><p>常量不能更改<br>define(“PI”, 3.14);<br>defined();  用来检测常量是否被定义</p>
+<p>变量分为：超全局变量；全局变量；局部变量；</p>
+<p>局部变量是针对函数而言，在函数内部的变量。</p>
+<h1 id="会话技术"><a href="#会话技术" class="headerlink" title="会话技术"></a>会话技术</h1><p>主要包括cookie 和 session</p>
+<p>$_SESSION   是保存在服务器端的，server端的。<br>$_COOKIE   是保存在浏览器端的一个数据</p>
+<p>setcookie()</p>
+<p>例子 使用cookie来计算当前页面访问次数。</p>
+<p>第一次设置cookie 当前页面取不出来。</p>
+<p>session 必须依靠cookie才能实现</p>
+<p>session_start();</p>
+<p>session 是依靠cookie值来读取 的。。</p>
+<p>例子  session 登陆测试</p>
+<h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><p>文件包含<br>require  报错不执行<br>include  报错也执行<br>require_once  只执行第一次，重复使用不执行<br>include_once</p>
+<p>文件上传<br>$_FILE</p>
+<p>例子： 文件上传</p>
+<p>move_uploaded_file();</p>
+<p>is_dir();判断当前目录存在么</p>
+<p><strong>DIR</strong>  php 魔术方法</p>
+<p>文件管理的基本函数</p>
+<p>realpath()</p>
+<p>opendir()<br>readdir()</p>
+<p>unlink()  删除文件</p>
+<p>file_get_content<br>file_put_content</p>
+<p>递归技巧</p>
+<p>/<em><br>    $path 目录<br>    $lev 层级 进入一层，目录更深，明显显示出来
+</em>/<br>function showDir($path,$lev=0){<br>    $fh = opendir($path);<br>    while($row = readdir($fh)){<br>        //如果目录为.和..就跳过<br>        if(($row==’.’) || ($row==’..’)){<br>            continue;<br>        }<br>        echo str_repeat(“&nbsp;&nbsp;”, $lev),$row,’<br>‘;<br>        //如果目录里还有目录继续向下读目录<br>        if(is_dir($path.’/‘.$row)){<br>            showdir($path.’/‘.$row,$lev+1);<br>        }<br>    }<br>    closedir($fh);<br>}<br>showDir(‘.’);</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/4、bootstrap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/19/4、bootstrap/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-06 22:38:49" itemprop="dateModified" datetime="2020-01-06T22:38:49+08:00">2020-01-06</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1、安装和使用bootstrap</p>
+<p>下载bootstrap  <a href="https://www.bootcss.com/" target="_blank" rel="noopener">https://www.bootcss.com/</a></p>
+<p>下载jquery  <a href="https://code.jquery.com/jquery-3.4.1.min.js" target="_blank" rel="noopener">https://code.jquery.com/jquery-3.4.1.min.js</a></p>
+<p>在bootstrap压缩包里面，找css文件夹下面的bootstrap.min.css</p>
+<p>还有一个在js文件夹下面的，bootstrap.min.js</p>
+<p>两个文件的导入顺序不能错<br>    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script><br>    <script type="text/javascript" src="bootstrap.min.js"></script><br>    <link rel="stylesheet" type="text/css" href="./js/bootstrap.min.css"></p>
+<p>2、bootstrap基本用法</p>
+<p>基本排版测试<br><a href="https://v3.bootcss.com/css/#type" target="_blank" rel="noopener">https://v3.bootcss.com/css/#type</a></p>
+<p>表格测试<br><a href="https://v3.bootcss.com/css/#tables" target="_blank" rel="noopener">https://v3.bootcss.com/css/#tables</a></p>
+<p>按钮测试<br><a href="https://v3.bootcss.com/css/#buttons" target="_blank" rel="noopener">https://v3.bootcss.com/css/#buttons</a></p>
+<p>表单样式<br><a href="https://v3.bootcss.com/css/#forms" target="_blank" rel="noopener">https://v3.bootcss.com/css/#forms</a></p>
+<p>图片<br><a href="https://v3.bootcss.com/css/#images" target="_blank" rel="noopener">https://v3.bootcss.com/css/#images</a></p>
+<p>栅格系统（重要）<br><a href="https://v3.bootcss.com/css/#grid" target="_blank" rel="noopener">https://v3.bootcss.com/css/#grid</a></p>
+<p>导航和分页<br><a href="https://v3.bootcss.com/components/#nav" target="_blank" rel="noopener">https://v3.bootcss.com/components/#nav</a></p>
+<p><a href="https://v3.bootcss.com/components/#pagination" target="_blank" rel="noopener">https://v3.bootcss.com/components/#pagination</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/3、css/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/19/3、css/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-01 19:44:02" itemprop="dateModified" datetime="2020-01-01T19:44:02+08:00">2020-01-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>CSS样式介绍</p>
+<p>选择器介绍<br>属性介绍<br>div+css布局</p>
+<p>css层叠样式表</p>
+<p>命名规则：使用字母，数字，或下划线和减号构成，不要以数字开头。<br>语法有三部分构成：选择器、属性、值  (selector {property: value})<br>注释 /<em>…</em>/</p>
+<p>使用css样式（在html 中嵌入css的方法）<br>    1、内联方式（行内样式）（不长使用）<br>    在html标签中使用style属性</p>
+<pre><code>2、在头部引用
+&lt;style type=&quot;text/css&quot;&gt;
+/*css 语法：selector {property: value}*/
+p{
+    border: 2px solid blue;
+    padding: 5px;
+}
+&lt;/style&gt;
+
+3、外部导入方式
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&quot;&gt;
+
+优先级：有冲突的时候，就近原则，没有冲突叠加。
+</code></pre><p>（二）CSS选择器<br>    通过选择器来控制你要控制的标签的样式。<br>    1、html选择符（标签选择器）<br>    就是把html标签作为选择符使用。如<br>    p{ }网页中所有p标签都会采用这个样式。</p>
+<pre><code>2、class选择器
+    在html标签里面增加一个属性class。然后在style里面使用.class{  }。使用
+
+3、ID选择符
+    id属性要是唯一的。在html里面加入属性id，然后使用#id{  },使用。
+
+
+4、通配符选择器
+*{  }
+
+5、关联选择符（包含选择符）
+    加入限定条件，进行精准改变样式。
+    table a{  }
+
+6、组合选择器
+    多个标签一起使用 h1,h2,h3{  }
+
+7、伪类选择器
+对伪类进行控制。
+a:link{  }
+</code></pre><p>(三)CSS属性介绍</p>
+<p>颜色；color<br>rgb:<br>rgba:<br>字体属性：font</p>
+<p>文本属性：</p>
+<p>盒子模型</p>
+<p>(四)div+css布局</p>
+<p>layout布局  float<br>块元素，和行元素。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/2、html/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/19/2、html/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-31 21:34:40" itemprop="dateModified" datetime="2019-12-31T21:34:40+08:00">2019-12-31</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>html 超文本标记语言   （静态网页语言）<br>html4   /   html5</p>
+<p>html的框架</p>
+<p>html是由：标签和内容构成<br>html标签（标记）的语法：标签是由“&lt;”和“&gt;”扩起来的<br>    单标签：&lt;标签名/&gt;    关闭的/在右边    比如<input><br>    双标签：&lt;标签名&gt;内容&lt;//标签名&gt;   关闭的/在左边</p>
+<p>（一）</p>
+<p><head><meta name="generator" content="Hexo 3.8.0">标签里面的一个标签用来解决中文乱码。</head></p>
+<meta charset="utf-8">
+
+<p>body里面的文本标签<br>    <br> 换行<br>    <hr><br>    </p><p>换段</p><p></p>
+<pre><code>&lt;i&gt;斜体 &lt;/i&gt;
+&lt;em&gt;强调斜体&lt;/em&gt;
+&lt;b&gt;加粗&lt;/b&gt;
+&lt;strong&gt;强调加粗&lt;/strong&gt;
+
+&lt;h1&gt;h1  标题&lt;/h1&gt;
+&lt;h2&gt;h2  标题&lt;/h2&gt;
+&lt;h3&gt;h3  标题&lt;/h3&gt;
+&lt;h4&gt;h4  标题&lt;/h4&gt;
+&lt;h5&gt;h5  标题&lt;/h5&gt;
+&lt;h6&gt;h6  标题&lt;/h6&gt;
+
+&lt;del&gt;删除线&lt;/del&gt;
+
+&lt;sub&gt;&lt;/sub&gt;下角标  &lt;sup&gt;&lt;/sup&gt;上角标
+X&lt;sup&gt;2&lt;/sup&gt;+Y&lt;sup&gt;2&lt;/sup&gt;=Z&lt;sup&gt;2&lt;/sup&gt;
+x&lt;sub&gt;2&lt;/sub&gt;+y&lt;sub&gt;2&lt;/sub&gt;=z&lt;sub&gt;2&lt;/sub&gt;
+
+每一个标签都有很多属性。
+
+&lt;font size=&quot;15&quot; color=&quot;blue&quot;&gt;字体标签测试&lt;/font&gt;
+size就是属性，来控制字体的大小，color属性来控制字体颜色。color是使用rgb来控制颜色。
+blue=#0000FF   red=#FF0000
+</code></pre><p>格式化标签：<br>    列表：<ul></ul>  无序列表<br>        <ol></ol>   有序列表<br>        <li>  列表项</li></p>
+<p><div><br><span></span></div></p>
+<p>超链接标签：<br>    <a href></a><br>    属性href，是必须加上的，指的是连接跳转地址。</p>
+<pre><code>target：默认_self。_blank表示，新打开一个标签页.
+
+title：
+</code></pre><p><img>标签：在网页中插入一张图片。<br>    属性；src：图片地址。<br>    新建一个文件夹img,放一些图片。</p>
+<p>相对路径：../img/001.jpg    .代表当前目录；..代表上级目录<br>绝对路径：/img/001.jpg   这个是绝对路径</p>
+<p>（二）多媒体标签<br>是html5以后才支持的。</p>
+<audio src controls="controls">播放音乐</audio>
+
+<video></video>
+
+
+<p>表格标签<br>table   表格标签<br>caption  表格标题</p>
+<p>tr  行标签<br>th  列头标签<br>td  列标签</p>
+<pre><code>&lt;table border=&quot;1&quot; width=&quot;300px&quot; cellspacing=&quot;0&quot; cellpadding=&quot;1&quot;&gt;
+    &lt;caption&gt;学生信息表&lt;/caption&gt;
+    &lt;tr bgcolor=&quot;#cccccc&quot;&gt;
+        &lt;th&gt;姓名&lt;/th&gt;
+        &lt;th&gt;性别&lt;/th&gt;
+        &lt;th&gt;年龄&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot; &gt;
+        &lt;td&gt;张三&lt;/td&gt;
+        &lt;td&gt;男&lt;/td&gt;
+        &lt;td&gt;18&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot;&gt;
+        &lt;td&gt;李四&lt;/td&gt;
+        &lt;td&gt;女&lt;/td&gt;
+        &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot;&gt;
+        &lt;td&gt;王二&lt;/td&gt;
+        &lt;td colspan=&quot;2&quot;&gt;weizhi&lt;/td&gt;
+
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot;&gt;
+        &lt;td&gt;麻子&lt;/td&gt;
+        &lt;td&gt;女&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre><p>（三）form表单</p>
+<form></form>   –表单标签<br>form标签常用属性：<br>    action属性：提交的目标地址（URL）<br>    method属性：提交方式：GET（默认）和post<br>        get方式是URL地址栏可见，长度受限制，相对不安全<br>        post方式是URL地址不可见，长度不受限制，相对安全<br>    enctype：提交类型 ,如果表单提交的有文件的话，需要写<br>    application/x-www-form-urlencoded：在发送前编码所有字符（默认）<br>    multipart/form-data：不对字符编码。在使用包含文件上传控件的表单时，必须使用该值。<br>    text/plain：空格转换为 “+” 加号，但不对特殊字符编码。<br><br>    target：在何处打开目标URL。<br>    name：属性为表单起名字。html5不支持用id代替。<br><br><input> 表单项标签input定义输入字段。用户可在其中输入数据。这是个单标签<br><br><input type="text" name="username"><br><br>&lt;!DOCTYPE html&gt;<br><html><br><head><meta name="generator" content="Hexo 3.8.0"><br>    <meta charset="utf-8"><br>    <title>测试案例</title><br></head><br><body><br><br>    <h2>表单测试</h2><br>    <form action="1.php" method="post" enctype="multipart/form-data"><br><br>    账号：<input type="text" value="51cto" readonly name="username"><br>    <br><br>    <br><br>    地址：<input type="text" value="河南省郑州市xx路" size="35" disabled name="address"><br>    <br><br>    <br><br>    密码：<input type="password" name="password"><br>    <br><br>    <br><br>    性别：<input type="radio" value="1" name="sex">男<input type="radio" value="0" name="sex" checked>女<br><br>    <br><br>    <br><br>    爱好：<input type="checkbox" name="like[]">篮球<br>    <input type="checkbox" name="like[]" checked>足球<br>    <input type="checkbox" name="like[]">台球<br>    <input type="checkbox" name="like[]" checked>乒乓球<br><br>    <br><br>    <br><br>    头像：<input type="file" name="headpic"><br><br>    <br><br><br><br>    日期：<br>    <select name="year" disabled><br>        <option value="1990">1990</option><br>        <option value="1991" selected>1991</option><br>        <option value="1992">1992</option><br>        <option value="1993">1993</option><br>    </select><br>    <br><br>    <br><br>    城市：<br>    <select name="country"><br>        <option value="beijing">北京</option><br>        <option value="shanghai" selected>上海</option><br>        <option value="guangzhou">广州</option><br>        <option value="zhengzhou">郑州</option><br>    </select><br>    <br><br>    <br><br>    简介：<br>    <textarea cols="20" rows="5">tester</textarea><br>    <br><br><br>    <!--html5 新标签--><br>    日期：<input type="date" name="dd"><br><br><br>    时间：<input type="time" name="tt"><br><br><br>    网址：<input type="url" name="uu"><br><br><br>    邮箱：<input type="email" name="ee"><br><br><br>    数值：<input type="number" name="nn"><br><br><br><br>    <input type="submit" name="提交"><br>    <input type="reset" name="重置"><br>    </form>
+
+<p></p></body><br></html><p></p>
+<p>iframe标签：</p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<html><br><head><meta name="generator" content="Hexo 3.8.0"><br><br>    <meta charset="utf-8"><br>    <title>test4</title><br></head><br><body><br><br>    <h2>测试实例：iframe页面分帧显示</h2><br>    <ul><br>        <li><a href="http://baidu.com" target="iframe1">baidu</a></li><br>        <li><a href="test3.html" target="iframe1">test3</a></li><br>    </ul><br><br>    <iframe name="iframe1" width="400" height="400" frameborder="1" src="test3.html"></iframe><br><br></body><br></html>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/1、环境搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/19/1、环境搭建/" class="post-title-link" itemprop="url">1、环境搭建</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-18 21:37:02" itemprop="dateModified" datetime="2020-04-18T21:37:02+08:00">2020-04-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>安装wampserver2.5，先安装vcredist_x64.exe。</p>
+<p>对服务器进行配置，<br>1、更改host文件欺骗dns。<br>打开目录C:\Windows\System32\drivers\etc  找到hosts文件<br>在最后一行添加<br>127.0.0.1       <a href="http://www.f.com" target="_blank" rel="noopener">www.f.com</a><br>127.0.0.1       <a href="http://www.k.com" target="_blank" rel="noopener">www.k.com</a><br>然后ping <a href="http://www.f.com" target="_blank" rel="noopener">www.f.com</a> 返回的地址是127.0.0.1</p>
+<p>1、配置Apache虚拟机，目的是为了访问多个网站，<br>找到Apache配置文件的地址，C:\wamp\bin\apache\apache2.4.9\conf  下面的httpd.conf<br>在wampserver目录下找到conf，找到httpd-conf文件，在该目录下搜索require，将所有匹配行改为require all granted，改完之后,找到Include conf/extra/httpd-vhosts.conf该行,将该行前面的#号去掉。这样就在文件中引入了vhosts,接下来打开vhost文件，C:\wamp\bin\apache\apache2.4.9\conf\extra<br>添加</p>
+<p><virtualhost *:80><br>    ServerAdmin <a href="mailto:webmaster@dummy-host.example.com" target="_blank" rel="noopener">webmaster@dummy-host.example.com</a><br>    DocumentRoot “c:/wamp/www/k.com”<br>    ServerName k.com<br>    ServerAlias <a href="http://www.k.com" target="_blank" rel="noopener">www.k.com</a><br>    ErrorLog “logs/dummy-host.example.com-error.log”<br>    CustomLog “logs/dummy-host.example.com-access.log” common<br></virtualhost><br>添加一个站点k.com.<br>需要在c:/wamp/www目录下面新建一个文件夹，k.com</p>
+<p>配置完成重启服务器</p>
+<p>在添加一个f.com的虚拟站点</p>
+<p>2、mysql的密码更改<br>点击mysqlconsole，默认密码为空。<br>三个mysql命令修改密码<br>use mysql;<br>update user set password=password(‘123’) where user=’root’ and host=’localhost’;<br>flush privileges;</p>
+<p>这里更改为123</p>
+<p>3、配置navicat<br>先下载<a href="https://www.cr173.com/soft/38153.html" target="_blank" rel="noopener">https://www.cr173.com/soft/38153.html</a><br>然后破解<a href="https://www.cnblogs.com/xiaodai0/p/9970349.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaodai0/p/9970349.html</a></p>
+<p>点击连接数据库，输入一个自己数据库的名字：mydatebase<br>连接自己的数据库。地址：localhost；用户名：root；密码：123。</p>
+<p>4、sublime的安装<br><a href="https://www.jianshu.com/p/38f080751f5c" target="_blank" rel="noopener">https://www.jianshu.com/p/38f080751f5c</a></p>
+<p>5、PHPstorm-10安装<br><a href="https://www.jianshu.com/p/dce5faa09bf7" target="_blank" rel="noopener">https://www.jianshu.com/p/dce5faa09bf7</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/10、PHP留言板/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/19/10、PHP留言板/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-25 21:07:01" itemprop="dateModified" datetime="2020-02-25T21:07:01+08:00">2020-02-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一、功能分析</p>
+<p>（1）用户注册<br>insert</p>
+<p>（2）用户登陆<br>select</p>
+<p>（3）密码找回<br>select 信息比对   update  修改密码</p>
+<p>一个user表</p>
+<p>手机   邮箱<br>发送一个验证码，<br>验证码对比（充值的连接）  参数（很容易找到逻辑漏洞）</p>
+<p>（4）个人信息设置（信息更新，头像上传）<br>users<br>update</p>
+<p>（5）留言发布<br>留言</p>
+<p>comment</p>
+<p>（6）留言展示（分页展示）</p>
+<p>（7）前台留言展示</p>
+<p>（8）管理员后台登录</p>
+<p>管理员用户表</p>
+<p>（9）后台管理</p>
+<p>三张表</p>
+<p>admin表：</p>
+<p>user表：</p>
+<p>comment表：</p>
+<p>zvuldrill</p>
+<p>二、界面的设计</p>
+<p>对每个展示的页面进行分析</p>
+<p>1 用户注册<br>2 用户登录<br>3 密码找回功能<br>4 个人信息设置（信息更新，头像上传）</p>
+<p>5 留言发布<br>6 留言展示<br>7 前台所有留言分页展示<br>8 搜索页面</p>
+<p>9 管理员后台登录<br>10 后台用户管理 （删除）<br>11 后台留言管理 （删除）</p>
+<p>三、功能实现</p>
+<p>PHP 5.3 以上</p>
+<p>admin/<br>css/<br>lib/<br>upload/<br>view/</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/18/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/18/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-04-18 19:37:49" itemprop="dateCreated datePublished" datetime="2019-04-18T19:37:49+08:00">2019-04-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
           <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/19/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
-  </section>
 
   
+
 
 
           </div>
           
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="gslaj">
-            
-              <p class="site-author-name" itemprop="name">gslaj</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </div>
-
-      
-
-      
-
-    </div>
-  </aside>
-  
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">gslaj</span>
-
-  
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.0</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
-  </div>
-
-  
 
 <script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">gslaj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gslaj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
 
 
 
@@ -1049,99 +1483,35 @@
 
 
 
+      </div>
+    </footer>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
 
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.1.0"></script>
-
-  <script src="/js/motion.js?v=7.1.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.1.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
 
 
 
 
-  
-
-  
-
-
-  <script src="/js/next-boot.js?v=7.1.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
 
 
 
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
   
 

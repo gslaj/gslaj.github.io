@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="html 超文本标记语言   （静态网页语言）html4   /   html5 html的框架 html是由：标签和内容构成html标签（标记）的语法：标签是由“&amp;lt;”和“&amp;gt;”扩起来的    单标签：&amp;lt;标签名/&amp;gt;    关闭的/在右边    比如    双标签：&amp;lt;标签名&amp;gt;内容&amp;lt;//标签名&amp;gt;   关闭的/在左边 （一） 标签里面的一个标签用来解决中文乱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gslaj&#39;s blog">
+<meta property="og:url" content="http://yoursite.com/2020/08/19/2、html/index.html">
+<meta property="og:site_name" content="gslaj&#39;s blog">
+<meta property="og:description" content="html 超文本标记语言   （静态网页语言）html4   /   html5 html的框架 html是由：标签和内容构成html标签（标记）的语法：标签是由“&amp;lt;”和“&amp;gt;”扩起来的    单标签：&amp;lt;标签名/&amp;gt;    关闭的/在右边    比如    双标签：&amp;lt;标签名&amp;gt;内容&amp;lt;//标签名&amp;gt;   关闭的/在左边 （一） 标签里面的一个标签用来解决中文乱">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-31T13:34:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gslaj&#39;s blog">
+<meta name="twitter:description" content="html 超文本标记语言   （静态网页语言）html4   /   html5 html的框架 html是由：标签和内容构成html标签（标记）的语法：标签是由“&amp;lt;”和“&amp;gt;”扩起来的    单标签：&amp;lt;标签名/&amp;gt;    关闭的/在右边    比如    双标签：&amp;lt;标签名&amp;gt;内容&amp;lt;//标签名&amp;gt;   关闭的/在左边 （一） 标签里面的一个标签用来解决中文乱">
+
+<link rel="canonical" href="http://yoursite.com/2020/08/19/2、html/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | gslaj's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">gslaj's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/2、html/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gslaj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gslaj's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 21:06:11" itemprop="dateCreated datePublished" datetime="2020-08-19T21:06:11+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-31 21:34:40" itemprop="dateModified" datetime="2019-12-31T21:34:40+08:00">2019-12-31</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>html 超文本标记语言   （静态网页语言）<br>html4   /   html5</p>
+<p>html的框架</p>
+<p>html是由：标签和内容构成<br>html标签（标记）的语法：标签是由“&lt;”和“&gt;”扩起来的<br>    单标签：&lt;标签名/&gt;    关闭的/在右边    比如<input><br>    双标签：&lt;标签名&gt;内容&lt;//标签名&gt;   关闭的/在左边</p>
+<p>（一）</p>
+<p><head><meta name="generator" content="Hexo 3.8.0">标签里面的一个标签用来解决中文乱码。</head></p>
+<meta charset="utf-8">
+
+<p>body里面的文本标签<br>    <br> 换行<br>    <hr><br>    </p><p>换段</p><p></p>
+<pre><code>&lt;i&gt;斜体 &lt;/i&gt;
+&lt;em&gt;强调斜体&lt;/em&gt;
+&lt;b&gt;加粗&lt;/b&gt;
+&lt;strong&gt;强调加粗&lt;/strong&gt;
+
+&lt;h1&gt;h1  标题&lt;/h1&gt;
+&lt;h2&gt;h2  标题&lt;/h2&gt;
+&lt;h3&gt;h3  标题&lt;/h3&gt;
+&lt;h4&gt;h4  标题&lt;/h4&gt;
+&lt;h5&gt;h5  标题&lt;/h5&gt;
+&lt;h6&gt;h6  标题&lt;/h6&gt;
+
+&lt;del&gt;删除线&lt;/del&gt;
+
+&lt;sub&gt;&lt;/sub&gt;下角标  &lt;sup&gt;&lt;/sup&gt;上角标
+X&lt;sup&gt;2&lt;/sup&gt;+Y&lt;sup&gt;2&lt;/sup&gt;=Z&lt;sup&gt;2&lt;/sup&gt;
+x&lt;sub&gt;2&lt;/sub&gt;+y&lt;sub&gt;2&lt;/sub&gt;=z&lt;sub&gt;2&lt;/sub&gt;
+
+每一个标签都有很多属性。
+
+&lt;font size=&quot;15&quot; color=&quot;blue&quot;&gt;字体标签测试&lt;/font&gt;
+size就是属性，来控制字体的大小，color属性来控制字体颜色。color是使用rgb来控制颜色。
+blue=#0000FF   red=#FF0000
+</code></pre><p>格式化标签：<br>    列表：<ul></ul>  无序列表<br>        <ol></ol>   有序列表<br>        <li>  列表项</li></p>
+<p><div><br><span></span></div></p>
+<p>超链接标签：<br>    <a href></a><br>    属性href，是必须加上的，指的是连接跳转地址。</p>
+<pre><code>target：默认_self。_blank表示，新打开一个标签页.
+
+title：
+</code></pre><p><img>标签：在网页中插入一张图片。<br>    属性；src：图片地址。<br>    新建一个文件夹img,放一些图片。</p>
+<p>相对路径：../img/001.jpg    .代表当前目录；..代表上级目录<br>绝对路径：/img/001.jpg   这个是绝对路径</p>
+<p>（二）多媒体标签<br>是html5以后才支持的。</p>
+<audio src controls="controls">播放音乐</audio>
+
+<video></video>
+
+
+<p>表格标签<br>table   表格标签<br>caption  表格标题</p>
+<p>tr  行标签<br>th  列头标签<br>td  列标签</p>
+<pre><code>&lt;table border=&quot;1&quot; width=&quot;300px&quot; cellspacing=&quot;0&quot; cellpadding=&quot;1&quot;&gt;
+    &lt;caption&gt;学生信息表&lt;/caption&gt;
+    &lt;tr bgcolor=&quot;#cccccc&quot;&gt;
+        &lt;th&gt;姓名&lt;/th&gt;
+        &lt;th&gt;性别&lt;/th&gt;
+        &lt;th&gt;年龄&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot; &gt;
+        &lt;td&gt;张三&lt;/td&gt;
+        &lt;td&gt;男&lt;/td&gt;
+        &lt;td&gt;18&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot;&gt;
+        &lt;td&gt;李四&lt;/td&gt;
+        &lt;td&gt;女&lt;/td&gt;
+        &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot;&gt;
+        &lt;td&gt;王二&lt;/td&gt;
+        &lt;td colspan=&quot;2&quot;&gt;weizhi&lt;/td&gt;
+
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot;&gt;
+        &lt;td&gt;麻子&lt;/td&gt;
+        &lt;td&gt;女&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre><p>（三）form表单</p>
+<form></form>   –表单标签<br>form标签常用属性：<br>    action属性：提交的目标地址（URL）<br>    method属性：提交方式：GET（默认）和post<br>        get方式是URL地址栏可见，长度受限制，相对不安全<br>        post方式是URL地址不可见，长度不受限制，相对安全<br>    enctype：提交类型 ,如果表单提交的有文件的话，需要写<br>    application/x-www-form-urlencoded：在发送前编码所有字符（默认）<br>    multipart/form-data：不对字符编码。在使用包含文件上传控件的表单时，必须使用该值。<br>    text/plain：空格转换为 “+” 加号，但不对特殊字符编码。<br><br>    target：在何处打开目标URL。<br>    name：属性为表单起名字。html5不支持用id代替。<br><br><input> 表单项标签input定义输入字段。用户可在其中输入数据。这是个单标签<br><br><input type="text" name="username"><br><br>&lt;!DOCTYPE html&gt;<br><html><br><head><meta name="generator" content="Hexo 3.8.0"><br>    <meta charset="utf-8"><br>    <title>测试案例</title><br></head><br><body><br><br>    <h2>表单测试</h2><br>    <form action="1.php" method="post" enctype="multipart/form-data"><br><br>    账号：<input type="text" value="51cto" readonly name="username"><br>    <br><br>    <br><br>    地址：<input type="text" value="河南省郑州市xx路" size="35" disabled name="address"><br>    <br><br>    <br><br>    密码：<input type="password" name="password"><br>    <br><br>    <br><br>    性别：<input type="radio" value="1" name="sex">男<input type="radio" value="0" name="sex" checked>女<br><br>    <br><br>    <br><br>    爱好：<input type="checkbox" name="like[]">篮球<br>    <input type="checkbox" name="like[]" checked>足球<br>    <input type="checkbox" name="like[]">台球<br>    <input type="checkbox" name="like[]" checked>乒乓球<br><br>    <br><br>    <br><br>    头像：<input type="file" name="headpic"><br><br>    <br><br><br><br>    日期：<br>    <select name="year" disabled><br>        <option value="1990">1990</option><br>        <option value="1991" selected>1991</option><br>        <option value="1992">1992</option><br>        <option value="1993">1993</option><br>    </select><br>    <br><br>    <br><br>    城市：<br>    <select name="country"><br>        <option value="beijing">北京</option><br>        <option value="shanghai" selected>上海</option><br>        <option value="guangzhou">广州</option><br>        <option value="zhengzhou">郑州</option><br>    </select><br>    <br><br>    <br><br>    简介：<br>    <textarea cols="20" rows="5">tester</textarea><br>    <br><br><br>    <!--html5 新标签--><br>    日期：<input type="date" name="dd"><br><br><br>    时间：<input type="time" name="tt"><br><br><br>    网址：<input type="url" name="uu"><br><br><br>    邮箱：<input type="email" name="ee"><br><br><br>    数值：<input type="number" name="nn"><br><br><br><br>    <input type="submit" name="提交"><br>    <input type="reset" name="重置"><br>    </form>
+
+<p></p></body><br></html><p></p>
+<p>iframe标签：</p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<html><br><head><meta name="generator" content="Hexo 3.8.0"><br><br>    <meta charset="utf-8"><br>    <title>test4</title><br></head><br><body><br><br>    <h2>测试实例：iframe页面分帧显示</h2><br>    <ul><br>        <li><a href="http://baidu.com" target="iframe1">baidu</a></li><br>        <li><a href="test3.html" target="iframe1">test3</a></li><br>    </ul><br><br>    <iframe name="iframe1" width="400" height="400" frameborder="1" src="test3.html"></iframe><br><br></body><br></html>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/19/1、环境搭建/" rel="prev" title="1、环境搭建">
+      <i class="fa fa-chevron-left"></i> 1、环境搭建
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/19/3、css/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">表单测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">测试实例：iframe页面分帧显示</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">gslaj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gslaj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
